@@ -146,7 +146,12 @@ export default function ResultsDashboard() {
       {/* Header & Export Actions */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Tax Dashboard</h2>
+          <div className="flex items-center gap-3">
+            <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Tax Dashboard</h2>
+            <span className="px-2.5 py-0.5 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">
+              FY 2025-26
+            </span>
+          </div>
           <p className="text-slate-500 text-sm mt-1">Real-time analysis of your tax profile</p>
         </div>
         <div className="flex gap-2 no-print">
