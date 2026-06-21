@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-success: #16A34A;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom utility for subtle shadow */
+.shadow-fintech {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-header {
+    display: block !important;
+  }
+  
+  .print-border {
+    border: 1px solid #E5E7EB !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  
+  .print-bg-blue {
+    background-color: #EFF6FF !important;
+    border: 1px solid #BFDBFE !important;
+    color: #1E3A8A !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bg-indigo-600 {
+    background-color: #4F46E5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bg-indigo-50\/30 {
+    background-color: rgba(238, 242, 255, 0.3) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+}
