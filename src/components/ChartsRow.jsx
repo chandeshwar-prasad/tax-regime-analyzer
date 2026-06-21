@@ -34,13 +34,13 @@ export default function ChartsRow({ newR, oldR, bestRegime, savings }) {
         <div className="h-48 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={barData} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
-              <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748B' }} />
-              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#94A3B8' }} tickFormatter={(val) => `₹${val/1000}k`} />
-              <RechartsTooltip cursor={{ fill: '#F1F5F9' }} formatter={(value) => [formatCurrency(value), 'Total Tax']} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#374151" />
+              <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#9CA3AF' }} />
+              <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#9CA3AF' }} tickFormatter={(val) => `₹${val/1000}k`} />
+              <RechartsTooltip cursor={{ fill: '#1F2937' }} formatter={(value) => [formatCurrency(value), 'Total Tax']} />
               <Bar dataKey="tax" radius={[4, 4, 0, 0]}>
                 {barData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.name.includes(bestRegime === 'NEW' ? 'New' : 'Old') ? '#2563EB' : '#CBD5E1'} />
+                  <Cell key={`cell-${index}`} fill={entry.name.includes(bestRegime === 'NEW' ? 'New' : 'Old') ? '#3B82F6' : '#4B5563'} />
                 ))}
               </Bar>
             </BarChart>

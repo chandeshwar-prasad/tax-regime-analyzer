@@ -33,7 +33,7 @@ export default function Wizard({ onBackToStart }) {
 
   if (isFinalStep) {
     return (
-      <div className="min-h-screen bg-[#F9FAFB] py-0 md:py-12 md:px-8 flex items-center justify-center">
+      <div className="min-h-screen bg-slate-950 py-0 md:py-12 md:px-8 flex items-center justify-center">
         <div className="bg-white w-full max-w-6xl shadow-2xl rounded-none md:rounded-3xl overflow-y-auto border-0 md:border border-gray-200 p-6 md:p-12 lg:p-16 flex items-center justify-center min-h-screen md:min-h-[85vh]">
           <ResultsScreen onBackToStart={onBackToStart} />
         </div>
@@ -42,7 +42,7 @@ export default function Wizard({ onBackToStart }) {
   }
 
   return (
-    <div className="min-h-screen bg-[#F9FAFB] py-0 md:py-12 md:px-8 flex items-center justify-center">
+    <div className="min-h-screen bg-slate-950 py-0 md:py-12 md:px-8 flex items-center justify-center">
       <div className="bg-white w-full max-w-6xl shadow-2xl rounded-none md:rounded-3xl overflow-hidden border-0 md:border border-gray-200 flex flex-col md:flex-row min-h-screen md:min-h-[85vh]">
         
         {/* Left: Main Form Area */}
