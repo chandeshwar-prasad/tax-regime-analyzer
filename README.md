@@ -44,8 +44,8 @@ The application follows a modular, zero-backend architecture:
 ## 📦 Local Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/tax-calculator.git
-   cd tax-calculator
+   git clone https://github.com/chandeshwar-prasad/tax-regime-analyzer.git
+   cd tax-regime-analyzer
    ```
 2. Install dependencies:
    ```bash
