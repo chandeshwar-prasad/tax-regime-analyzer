@@ -1,6 +1,12 @@
 # Smart Tax Calculator for Salaried Indians (FY 2025-26)
 
-![Tax Calculator Dashboard Preview](https://via.placeholder.com/1200x630.png?text=Smart+Tax+Calculator+Dashboard)
+## Dashboard Preview
+
+![Dashboard](taxcal1.png)
+
+## Analytics & Insights
+
+![Analytics](taxcal2.png)
 
 ## 📌 Project Overview
 A premium, real-time web application designed to help salaried Indian professionals navigate the complexities of the FY 2025-26 tax laws. The tool instantly compares the Old and New Tax Regimes, provides a clear recommendation on which saves more money, and visualizes the tax breakdown—all within a modern, user-friendly Fintech dashboard.
