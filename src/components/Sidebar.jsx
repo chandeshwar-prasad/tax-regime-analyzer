@@ -147,7 +147,7 @@ export default function Sidebar() {
             value={data.pt}
             onChange={handleNumChange}
             placeholder="e.g. 200" 
-            desc="Deducted by employer (usually ₹150-₹200)."
+            desc="Deducted by employer (₹0 – ₹200)."
           />
         </Section>
 
