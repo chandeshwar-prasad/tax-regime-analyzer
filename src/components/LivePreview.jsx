@@ -43,7 +43,7 @@ export default function LivePreview() {
         <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
           <p className="text-sm text-gray-500 mb-1">Estimated Annual Gross</p>
           <p className="text-2xl font-bold text-gray-900">
-            ₹ {annualGross.toLocaleString('en-IN')}
+            ₹ {(annualGross === 0 ? 0 : annualGross).toLocaleString('en-IN')}
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function LivePreview() {
               <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">Default</span>
             </div>
             <p className="text-sm text-indigo-700/80 mb-1">Estimated Tax</p>
-            <p className="text-xl font-bold text-indigo-700">₹ {newRegimeResult.totalTax.toLocaleString('en-IN')}</p>
+            <p className="text-xl font-bold text-indigo-700">₹ {(newRegimeResult.totalTax === 0 ? 0 : newRegimeResult.totalTax).toLocaleString('en-IN')}</p>
           </div>
 
           <div className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
@@ -63,7 +63,7 @@ export default function LivePreview() {
               <span className="text-sm font-semibold text-gray-700">Old Regime</span>
             </div>
             <p className="text-sm text-gray-500 mb-1">Estimated Tax</p>
-            <p className="text-xl font-bold text-gray-700">₹ {oldRegimeResult.totalTax.toLocaleString('en-IN')}</p>
+            <p className="text-xl font-bold text-gray-700">₹ {(oldRegimeResult.totalTax === 0 ? 0 : oldRegimeResult.totalTax).toLocaleString('en-IN')}</p>
           </div>
         </div>
       </div>

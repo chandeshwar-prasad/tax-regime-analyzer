@@ -59,7 +59,7 @@ export default function ResultsScreen({ onBackToStart }) {
   const bestRegime = newR.totalTax <= oldR.totalTax ? 'NEW' : 'OLD';
   const savings = Math.abs(newR.totalTax - oldR.totalTax);
 
-  const formatCurrency = (amount) => `₹ ${amount.toLocaleString('en-IN')}`;
+  const formatCurrency = (amount) => `₹ ${(amount === 0 ? 0 : amount).toLocaleString('en-IN')}`;
 
   const handleCopy = () => {
     const text = `Tax Calculator Summary (FY 2025-26)\nGross Income: ${formatCurrency(annualGross)}\nRecommended Regime: ${bestRegime}\nSavings: ${formatCurrency(savings)}\nFinal Tax (${bestRegime}): ${formatCurrency(bestRegime === 'NEW' ? newR.totalTax : oldR.totalTax)}`;
@@ -94,7 +94,7 @@ export default function ResultsScreen({ onBackToStart }) {
         </div>
         <div className="flex justify-between items-center pb-2 border-b border-gray-100 text-green-600">
           <span>Total Deductions</span>
-          <span className="font-semibold">-{formatCurrency(result.totalDeductions)}</span>
+          <span className="font-semibold">{result.totalDeductions > 0 ? '-' : ''}{formatCurrency(result.totalDeductions)}</span>
         </div>
         <div className="flex justify-between items-center pb-2 border-b border-gray-100">
           <span className="text-gray-500">Net Taxable Income</span>

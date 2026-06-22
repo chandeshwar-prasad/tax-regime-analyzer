@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
-const formatCurrency = (amount) => `₹ ${amount.toLocaleString('en-IN')}`;
+const formatCurrency = (amount) => `₹ ${(amount === 0 ? 0 : amount).toLocaleString('en-IN')}`;
 
 export default function ChartsRow({ newR, oldR, bestRegime, savings }) {
   // Bar Chart Data

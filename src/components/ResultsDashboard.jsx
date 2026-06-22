@@ -4,7 +4,7 @@ import { calculateNewRegime, calculateOldRegime } from '../utils/taxEngine';
 import ChartsRow from './ChartsRow';
 import { CheckCircle2, ChevronDown, ChevronUp, AlertCircle, Copy, Share2, Printer, FileText, Check } from 'lucide-react';
 
-const formatCurrency = (amount) => `₹ ${amount.toLocaleString('en-IN')}`;
+const formatCurrency = (amount) => `₹ ${(amount === 0 ? 0 : amount).toLocaleString('en-IN')}`;
 
 const Collapsible = ({ title, children, defaultOpen = false, icon: Icon }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -122,7 +122,7 @@ export default function ResultsDashboard() {
           </div>
           <div className="flex justify-between items-center text-slate-500">
             <span>Total Deductions</span>
-            <span className="font-semibold">-{formatCurrency(result.totalDeductions)}</span>
+            <span className="font-semibold">{result.totalDeductions > 0 ? '-' : ''}{formatCurrency(result.totalDeductions)}</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-slate-500">Taxable Income</span>
