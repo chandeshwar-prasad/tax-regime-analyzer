@@ -141,6 +141,14 @@ export default function Sidebar() {
             placeholder="e.g. 5000" 
             desc="Tax already deducted by employer."
           />
+          <InputField 
+            label="Monthly Professional Tax (PT)" 
+            name="pt" 
+            value={data.pt}
+            onChange={handleNumChange}
+            placeholder="e.g. 200" 
+            desc="Deducted by employer (usually ₹150-₹200)."
+          />
         </Section>
 
         <Section title="Income Details" step="2" icon={Briefcase}>
