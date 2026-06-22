@@ -3,13 +3,13 @@ import { calculateNewRegime, calculateOldRegime } from './src/utils/taxEngine.js
 const scenarios = [
   // 1. Normal Scenarios
   { name: 'Income ₹3 lakh', gross: 300000, expectedNew: 0, expectedOld: 0 },
-  { name: 'Income ₹7 lakh', gross: 700000, expectedNew: 0, expectedOld: 33800 },
-  { name: 'Income ₹12 lakh', gross: 1200000, expectedNew: 0, expectedOld: 148200 },
-  { name: 'Income ₹20 lakh', gross: 2000000, expectedNew: 286000, expectedOld: 390000 },
+  { name: 'Income ₹7 lakh', gross: 700000, expectedNew: 0, expectedOld: 44200 },
+  { name: 'Income ₹12 lakh', gross: 1200000, expectedNew: 0, expectedOld: 163800 },
+  { name: 'Income ₹20 lakh', gross: 2000000, expectedNew: 192400, expectedOld: 413400 },
 
   // 2. Boundary Scenarios
   { name: 'Income = ₹0', gross: 0, expectedNew: 0, expectedOld: 0 },
-  { name: 'Income exactly at new rebate threshold (12L + 75k)', gross: 1275000, expectedNew: 0, expectedOld: 171600 },
+  { name: 'Income exactly at new rebate threshold (12L + 75k)', gross: 1275000, expectedNew: 0, expectedOld: 187200 },
   { name: 'Income exactly at old rebate threshold (5L + 50k)', gross: 550000, expectedNew: 0, expectedOld: 0 },
   
   // 4. Deduction Scenarios (Gross 15L)
@@ -19,9 +19,9 @@ const scenarios = [
   { name: 'Combo (15L)', gross: 1500000, investments: { invest80c: 150000, healthInsurance: 25000, nps: 50000 }, housing: { paysRent: true, monthlyRent: 30000, isMetro: true } },
 
   // 6. High Income Scenarios
-  { name: 'Income ₹50 lakh', gross: 5000000, expectedNew: 1185600, expectedOld: 1326000 },
-  { name: 'Income ₹1 crore', gross: 10000000, expectedNew: 2806960, expectedOld: 3036800 },
-  { name: 'Income ₹5 crore', gross: 50000000, expectedNew: 18131500, expectedOld: 20496100 },
+  { name: 'Income ₹50 lakh', gross: 5000000, expectedNew: 1099800, expectedOld: 1349400 },
+  { name: 'Income ₹1 crore', gross: 10000000, expectedNew: 2925780, expectedOld: 3200340 },
+  { name: 'Income ₹5 crore', gross: 50000000, expectedNew: 18924750, expectedOld: 19236750 },
 ];
 
 console.log("=== QA Test Results ===\n");

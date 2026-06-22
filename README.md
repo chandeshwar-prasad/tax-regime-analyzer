@@ -1,5 +1,7 @@
 # Smart Tax Calculator for Salaried Indians (FY 2025-26)
 
+🔗 **Live Application**: [https://tax-regime-analyzer.vercel.app](https://tax-regime-analyzer.vercel.app)
+
 ## Dashboard Preview
 
 ![Dashboard](taxcal1.png)
