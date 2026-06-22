@@ -27,9 +27,10 @@ const calculateMarginalRelief = (income, threshold, taxCalculated) => {
 
 export const calculateNewRegime = (annualGross, pt) => {
   const stdDeduction = 75000;
+  const appliedDeductions = Math.min(annualGross, stdDeduction + pt);
   
   // Taxable Income Calculation
-  let taxableIncome = annualGross - stdDeduction - pt;
+  let taxableIncome = annualGross - appliedDeductions;
   if (taxableIncome < 0) taxableIncome = 0;
 
   // New Regime Slabs FY 25-26
@@ -66,7 +67,7 @@ export const calculateNewRegime = (annualGross, pt) => {
 
   return {
     annualGross,
-    totalDeductions: stdDeduction + pt,
+    totalDeductions: appliedDeductions,
     taxableIncome,
     baseTax: tax,
     surcharge,
@@ -120,9 +121,10 @@ export const calculateOldRegime = (annualGross, ageGroup, pt, investments = {}, 
   investmentDeduction += Math.min(npsInvested, 50000);
 
   const totalDeductions = housingDeduction + investmentDeduction;
+  const appliedDeductions = Math.min(annualGross, stdDeduction + pt + totalDeductions);
 
   // Taxable Income Calculation
-  let taxableIncome = annualGross - stdDeduction - pt - totalDeductions;
+  let taxableIncome = annualGross - appliedDeductions;
   if (taxableIncome < 0) taxableIncome = 0;
 
   // Old Regime Slabs (Age Dependent)
@@ -174,7 +176,7 @@ export const calculateOldRegime = (annualGross, ageGroup, pt, investments = {}, 
 
   return {
     annualGross,
-    totalDeductions: stdDeduction + pt + totalDeductions,
+    totalDeductions: appliedDeductions,
     taxableIncome,
     baseTax: tax,
     surcharge,
