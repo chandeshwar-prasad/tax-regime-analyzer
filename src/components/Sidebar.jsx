@@ -93,7 +93,7 @@ export default function Sidebar() {
       <div className="p-6 border-b border-slate-200 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur z-10">
         <div className="flex items-center gap-2">
           <Calculator className="w-6 h-6 text-blue-600" />
-          <h1 className="text-xl font-bold text-slate-900 tracking-tight">Tax Calculator</h1>
+          <h1 className="text-xl font-bold text-slate-900 tracking-tight">Your Tax Calculator</h1>
         </div>
         <span className="px-2.5 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
           FY 2025-26

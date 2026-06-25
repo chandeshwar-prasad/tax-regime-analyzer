@@ -1,4 +1,4 @@
-# Smart Tax Calculator for Salaried Indians (FY 2025-26)
+# Your Tax Calculator for Salaried Indians (FY 2025-26)
 
 🔗 **Live Application**: [https://tax-regime-analyzer.vercel.app](https://tax-regime-analyzer.vercel.app)
 
@@ -88,4 +88,4 @@ A comprehensive test suite was executed against the `taxEngine.js` ensuring perf
 * Surcharge Marginal Relief logic (for incomes hovering exactly at the ₹50L/₹1Cr boundaries).
 
 ## 💡 Lessons Learned
-Transitioning from a Data/Analytics mindset to full-stack product engineering required a deep focus on **User Experience**. While the math (`taxEngine.js`) was straightforward, designing an interface that *builds trust* without overwhelming the user was the true challenge. The implementation of real-time SVG charts and immediate visual feedback (green recommendation banners) proved crucial in translating raw data into actionable insights for the end-user.
+Transitioning into a Data/Analytics path and exploring AI applications highlighted the importance of translating raw data into clear user experiences. While the math (`taxEngine.js`) was straightforward, designing an interface that *builds trust* without overwhelming the user was the key challenge. The implementation of real-time SVG charts and immediate visual feedback (green recommendation banners) proved crucial in turning complex tax data into clear, actionable insights.
